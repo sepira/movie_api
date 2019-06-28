@@ -235,20 +235,3 @@ class GetMoviesSchedule(Resource):
 
         finally:
             return response
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
