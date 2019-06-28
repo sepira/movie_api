@@ -38,9 +38,9 @@ For the fetch/ and movies/ commands just click on 'Try it out' and click 'Execut
 ```
 Task 5
 ```
-Similar to /movies/uuid/schedule/ - do the same but uuid parameter is required
+Similar to /movies/<uuid>/schedule/ - do the same but uuid parameter is required
 ```
 ```
-To use the show_date option, just copy the url of /movies/uuid/schedule/ paste in url browser and add ?show_date=<date> in the end.
+To use the show_date option, just copy the url of /movies/<uuid>/schedule/ paste in url browser and add ?show_date=<date> in the end.
 ```
 
