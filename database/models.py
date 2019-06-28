@@ -32,13 +32,14 @@ class Schedules(db.Model):
     price = db.Column(db.Text)
     variant = db.Column(db.Text)
     cinema_name = db.Column(db.Text)
-    screening = db.Column(db.Text)
+    screening = db.Column(db.DateTime)
+    show_date = db.Column(db.Date)
     seat_type = db.Column(db.Text)
     theater_code = db.Column(db.Text)
     uuid = db.Column(db.Text)
 
     def __init__(self, id, movie_id, movie_title, cinema_code, price, variant, cinema_name,
-                 screening, seat_type, theater_code, uuid):
+                 screening, show_date, seat_type, theater_code, uuid):
         self.id = id
         self.movie_id = movie_id
         self.movie_title = movie_title
@@ -46,7 +47,8 @@ class Schedules(db.Model):
         self.price = price
         self.variant = variant
         self.cinema_name = cinema_name
-        self.screening = screening
+        self.screening = datetime.strptime(screening, '%m/%d/%Y %I:%M:%S %p')
+        self.show_date = datetime.strptime("".join(show_date), '%m/%d/%Y')
         self.seat_type = seat_type
         self.theater_code = theater_code
         self.uuid = uuid
