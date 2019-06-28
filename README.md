@@ -13,19 +13,19 @@ You will need to have Python with Virtualenv and Git installed on your machine.
 
 First clone the application code into any directory on your disk:
 ```
-$ cd /path/to/my/workspace/
-$ git clone https://github.com/sepira/movie_api.git
-$ cd movie_api
+> cd /path/to/my/workspace/
+> git clone https://github.com/sepira/movie_api.git
+> cd movie_api
 ```
 Create a virtual Python environment in a directory named venv, activate the virtualenv and install required dependencies using pip:
 ```
-$ virtualenv -p `which python3` venv
-$ source venv/bin/activate
-(venv) $ pip install -r requirements.txt
+> virtualenv venv
+> venv\Scripts\activate
+(venv) > pip install -r requirements.txt
 ```
 Now let’s set up the app for development and start it:
 ```
-$ python app.py
+> python app.py
 ```
 In your browser, open the URL http://localhost:8888/api/
 
